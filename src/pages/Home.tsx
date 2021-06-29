@@ -27,14 +27,14 @@ export function Home() {
     async function handleJoinRoom(event: FormEvent) {
         event.preventDefault();
 
-        if(roomCode.trim() === '') {
+        if (roomCode.trim() === '') {
             return;
         }
 
         // .get() busca todos os registro da sala.
         const roomRef = await database.ref(`rooms/${roomCode}`).get();
 
-        if(!roomRef.exists()) {
+        if (!roomRef.exists()) {
             alert('Room does not exists.');
             return;
         }
@@ -51,8 +51,10 @@ export function Home() {
         <div id="page-auth">
             <aside>
                 <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas" />
-                <strong>Crie salas de Q&amp;A ao-vivo</strong>
-                <p>Tire as dúvidas da sua audiência em tempo-real</p>
+                <div>
+                    <strong>Crie salas de Q&amp;A ao-vivo</strong>
+                    <p>Tire as dúvidas da sua audiência em tempo-real</p>
+                </div>
             </aside>
             <main>
                 <div className="main-content">
@@ -62,7 +64,7 @@ export function Home() {
                         Crie sua sala com o google
                     </button>
                     <div className="separator">ou entre em uma sala</div>
-                    <form onSubmit={handleJoinRoom}> 
+                    <form onSubmit={handleJoinRoom}>
                         <input
                             type="text"
                             placeholder="Digite o código da sala"
