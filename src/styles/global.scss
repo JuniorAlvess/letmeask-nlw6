@@ -9,6 +9,98 @@ body {
     color: #29292e;
 }
 
-body, input, body, textarea {
+body,
+input,
+body,
+textarea {
     font: 400 16px 'Roboto', sans-serif;
+}
+
+@media (max-width: 770px) {
+    body {
+        #page-auth {
+            display: block;
+
+            aside {
+                flex-direction: row;
+                align-items: center;
+                gap: 1rem;
+                padding: 0.5rem;
+                margin-bottom: 5rem;
+
+                img {
+                    width: 4rem;
+                }
+
+                div {
+                    z-index: 1;
+                }
+
+                strong {
+                    font: 700 1.262rem 'Poppins', sans-serif;
+                    margin-top: 0;
+                }
+
+                p {
+                    display: none;
+                }
+            }
+        }
+
+        #page-room {
+            header {
+                background: #835afd;
+
+                .content {
+                    gap: .7rem;
+
+                    div {
+                        gap: 0.2rem;
+
+                        .room-code {
+                            width: 13rem;
+                            border-color: #fff;
+
+                            span {
+                                padding: 0 0.2rem;
+                            }
+                        }
+
+                        .button {
+                            width: 3.5rem;
+                            align-self: flex-end;
+                            border: 1px solid #835afd;
+                        }
+                    }
+                }
+            }
+
+            .question:last-child {
+                margin-bottom: 1rem;
+            }
+        }
+
+        main {
+            width: 95vw;
+            margin: 0 auto;
+
+            .room-title {
+                justify-content: space-between;
+
+                h1 {
+                    font-size: 1.3rem !important;
+                }
+            }
+
+            form .form-footer .button {
+                height: 2.5rem;
+                padding: 0 1rem;
+                transition: transform 0.2s;
+
+                &:active {
+                    transform: scale(.9);
+                }
+            }
+        }
+    }
 }
