@@ -1,4 +1,4 @@
-import {FormEvent, useState} from 'react'
+import { FormEvent, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
 import illustrationImg from '../assets/images/illustration.svg';
@@ -11,6 +11,7 @@ import { useAuth } from '../hooks/useAuth';
 import '../styles/auth.scss'
 import { database } from '../services/firebase';
 import firebase from 'firebase';
+import { SwitchToLightAndDarkMode } from '../components/SwitchToLightAndDarkMode';
 
 export function NewRoom() {
     const { user } = useAuth()
@@ -21,7 +22,7 @@ export function NewRoom() {
         event.preventDefault();
 
         // .trim() remove os espaços tanto da esquerda quanto da direita
-        if(newRoom.trim() === '') {
+        if (newRoom.trim() === '') {
             return;
         }
 
@@ -29,7 +30,7 @@ export function NewRoom() {
 
         const firebaseRoom = await roomRef.push({
             title: newRoom,
-            authorId: user?.id 
+            authorId: user?.id
         })
 
         history.push(`/rooms/${firebaseRoom.key}`)
@@ -43,6 +44,7 @@ export function NewRoom() {
                 <p>Tire as dúvidas da sua audiência em tempo-real</p>
             </aside>
             <main>
+                <SwitchToLightAndDarkMode />
                 <div className="main-content">
                     <img src={logoImg} alt="Letmeask" />
                     <h2>Criar uma nova sala</h2>

@@ -3,7 +3,9 @@
     border-radius: 8px;
     overflow: hidden;
 
-    background: #FFF;
+    // background: #FFF;
+    background: var(--background-input);
+    color: var(--color-input);
     border: 1px solid #835afd;
     cursor: pointer;
 
