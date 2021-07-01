@@ -4,6 +4,7 @@ import logoImg from '../assets/images/logo.svg';
 import { Button } from '../components/Button';
 import { Question } from '../components/Question';
 import { RoomCode } from '../components/RoomCode';
+import { SwitchToLightAndDarkMode } from '../components/SwitchToLightAndDarkMode';
 import { useAuth } from '../hooks/useAuth';
 import { useRoom } from '../hooks/useRoom';
 import { database } from '../services/firebase';
@@ -64,9 +65,9 @@ export function Room() {
                 <div className="content">
                     <img src={logoImg} alt="Letmeask" />
                     <RoomCode code={roomId} />
+                    <SwitchToLightAndDarkMode />
                 </div>
             </header>
-
             <main>
                 <div className="room-title">
                     <h1>Sala {title}</h1>

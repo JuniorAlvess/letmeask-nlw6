@@ -10,6 +10,7 @@ import { useAuth } from '../hooks/useAuth';
 
 import '../styles/auth.scss'
 import { database } from '../services/firebase';
+import { SwitchToLightAndDarkMode } from '../components/SwitchToLightAndDarkMode';
 
 export function Home() {
     const history = useHistory();
@@ -57,6 +58,7 @@ export function Home() {
                 </div>
             </aside>
             <main>
+                <SwitchToLightAndDarkMode />
                 <div className="main-content">
                     <img src={logoImg} alt="Letmeask" />
                     <button onClick={handleCreateRoom} className="create-room">

@@ -41,6 +41,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        >.test-switch{
+            // align-self: flex-start;
+            position: absolute;
+            right: 1rem;
+            top: 3rem;
+        }
     }
 
     .main-content {
@@ -59,7 +66,7 @@
             font-size: 24px;
             margin: 64px 0 24px;
             font-family: 'Poppins', sans-serif;
-            color: var(--color-h2);
+            color: var(--color-h);
         }
 
         form {
