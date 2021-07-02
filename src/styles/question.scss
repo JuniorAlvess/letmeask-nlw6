@@ -1,10 +1,12 @@
 .question {
-    background: #fefefe;
+    // background: #fefefe;
+    background: var(--background-input);
+    border: 1px solid #fff;
     border-radius: 8px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
     padding: 24px;
 
-    & + .question {
+    &+.question {
         margin-top: 8px;
     }
 
@@ -22,7 +24,7 @@
     }
 
     p {
-        color: #29292e;
+        color: var(--color-input);
     }
 
     footer {
@@ -43,13 +45,13 @@
 
             span {
                 margin-left: 8px;
-                color: #737380;
+                color: var(--color-span);
                 font-size: 14px;
             }
 
         }
 
-        > div {
+        >div {
             display: flex;
             gap: 16px;
         }
@@ -59,7 +61,7 @@
             background: transparent;
             cursor: pointer;
             transition: filter 0.2s;
-            
+
             &.like-button {
                 display: flex;
                 align-items: flex-end;
@@ -73,7 +75,7 @@
                         stroke: #835afd
                     }
                 }
-                
+
             }
 
             &:hover {
