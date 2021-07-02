@@ -13,6 +13,7 @@ import { useRoom } from '../hooks/useRoom';
 
 import '../styles/room.scss'
 import { database } from '../services/firebase';
+import { SwitchToLightAndDarkMode } from '../components/SwitchToLightAndDarkMode';
 
 type RoomParams = {
     id: string;
@@ -61,6 +62,7 @@ export function AdminRoom() {
                     <div>
                         <RoomCode code={roomId} />
                         <Button isOutlined onClick={handleEndRoom}>Encerrar sala</Button>
+                        <SwitchToLightAndDarkMode />
                     </div>
                 </div>
             </header>
