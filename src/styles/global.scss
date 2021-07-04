@@ -1,24 +1,28 @@
 :root {
     --background-color: #F8F8F8;
     --background-color-aside: #835AFD;
+    --background-color-question: #F4F0FF;
+    --background-color-question-answered: #DBDCDD;
+    --background-input: #FFF;
     --color-strong: #FFF;
     --color-paragraph: #737380;
     --color-h: #29292e;
-    --background-input: #FFF;
     --color-input: #333;
-    // --color-span: #737380;
     --color-separator: #A8A8B3;
+    --color-like-button: #835afd;
 }
 
 .dark-mode {
     --background-color: #0A043C;
     --background-color-aside: #6245ba;
-    // --color-strong: #FFF;
+    --background-color-question: #6245ba;
+    --background-color-question-answered: rgba(82, 82, 82, 0.733);
+    --background-input: #16213E;
     --color-paragraph: #F8F8F8;
     --color-h: #F8F8F8;
-    --background-input: #16213E;
     --color-input: #F8F8F8;
     --color-span: #BBE1FA;
+    --color-like-button: #FFF;
 }
 
 * {
@@ -83,7 +87,7 @@ textarea {
                         .room-code {
                             width: 13rem;
                             border-color: #fff;
-                            
+
                             span {
                                 padding: 0 0.2rem;
                             }
@@ -107,7 +111,7 @@ textarea {
             width: 95vw;
             margin: 0 auto;
 
-            >.test-switch{
+            >.test-switch {
                 // align-self: flex-start;
                 position: absolute;
                 right: 1rem;
