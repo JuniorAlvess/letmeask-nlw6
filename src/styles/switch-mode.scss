@@ -9,12 +9,8 @@
 .test-switch>*:active {
     transform: scale(.5);
 }
-.dark-on {
-    color:  #ffa500;
+.light-dark {
+    color: var(--color-switch-light-dark);
     border-radius: 50% 50% 50% 50%;
-    box-shadow: 0 1.5rem 15px #FFA500;
-}
-
-.light-on {
-    color: #A8A8B3
+    // box-shadow: 0 1.5rem 15px #FFA500;
 }

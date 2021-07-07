@@ -4,6 +4,7 @@
     --background-color-question: #F4F0FF;
     --background-color-question-answered: #DBDCDD;
     --background-input: #FFF;
+    --color-switch-light-dark: #A8A8B3;
     --color-strong: #FFF;
     --color-paragraph: #737380;
     --color-h: #29292e;
@@ -17,6 +18,7 @@
     --background-color-aside: #6245ba;
     --background-color-question: #6245ba;
     --background-color-question-answered: rgba(82, 82, 82, 0.733);
+    --color-switch-light-dark: #FFA500;
     --background-input: #16213E;
     --color-paragraph: #F8F8F8;
     --color-h: #F8F8F8;
@@ -83,9 +85,10 @@ textarea {
 
                     div {
                         gap: 0.2rem;
+                        align-items: center;
 
                         .room-code {
-                            width: 13rem;
+                            max-width: 10rem;
                             border-color: #fff;
 
                             span {
@@ -94,8 +97,7 @@ textarea {
                         }
 
                         .button {
-                            width: 3.5rem;
-                            align-self: flex-end;
+                            width: 3rem;
                             border: 1px solid #835afd;
                         }
                     }
@@ -138,3 +140,35 @@ textarea {
         }
     }
 }
+
+// @media (max-width: 450px) {
+//     #page-room {
+//         header {
+//             background: #835afd;
+
+//             .content {
+//                 gap: .7rem;
+
+//                 div {
+//                     gap: 0.2rem;
+//                     align-items: center;
+//                     // flex-wrap: wrap;
+
+//                     .room-code {
+//                         width: rem;
+//                         border-color: #fff;
+//                         // order: 1;
+//                         span {
+//                             padding: 0 0.2rem;
+//                         }
+//                     }
+
+//                     .button {
+//                         width: 3rem;
+//                         border: 1px solid #835afd;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
