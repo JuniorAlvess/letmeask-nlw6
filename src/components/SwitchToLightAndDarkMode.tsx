@@ -19,15 +19,15 @@ export function SwitchToLightAndDarkMode() {
             <div className="test-switch">
                 {mode == 'dark' ? (
                     <FaFire
-                        title="Dark Mode"
-                        className="dark-on"
+                        title="Light Mode"
+                        className="light-dark"
                         size="40"
                         onClick={() => darkMode('light')}
                     />
                 ) : (
                     <FaFire
-                        title="Light Mode"
-                        className="light-on"
+                        title="Dark Mode"
+                        className="light-dark"
                         size="40"
                         onClick={() => darkMode('dark')}
                     />
