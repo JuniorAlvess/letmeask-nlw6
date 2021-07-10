@@ -40,7 +40,7 @@ export function Home() {
             return;
         }
 
-        if (roomRef.exists()) {
+        if (roomRef.val().endedAt) {
             alert('Room already closed.');
             return;
         }
