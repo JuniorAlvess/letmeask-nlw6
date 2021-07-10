@@ -87,18 +87,18 @@ textarea {
                         gap: 0.2rem;
                         align-items: center;
 
-                        .room-code {
-                            max-width: 10rem;
-                            border-color: #fff;
-
-                            span {
-                                padding: 0 0.2rem;
-                            }
-                        }
-
                         .button {
                             width: 3rem;
                             border: 1px solid #835afd;
+                        }
+                    }
+                    .room-code {
+                        max-width: 11rem;
+                        border-color: #fff;
+
+                        span {
+                            font-size: 0.69rem;
+                            padding: 0 0.1rem;
                         }
                     }
                 }
@@ -137,38 +137,17 @@ textarea {
                     transform: scale(.9);
                 }
             }
+
+            .empty-question-list {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &>:first-child {
+                    margin-top: 1rem !important;
+                    font-size: 7rem !important;
+                }
+            }
         }
     }
 }
-
-// @media (max-width: 450px) {
-//     #page-room {
-//         header {
-//             background: #835afd;
-
-//             .content {
-//                 gap: .7rem;
-
-//                 div {
-//                     gap: 0.2rem;
-//                     align-items: center;
-//                     // flex-wrap: wrap;
-
-//                     .room-code {
-//                         width: rem;
-//                         border-color: #fff;
-//                         // order: 1;
-//                         span {
-//                             padding: 0 0.2rem;
-//                         }
-//                     }
-
-//                     .button {
-//                         width: 3rem;
-//                         border: 1px solid #835afd;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
