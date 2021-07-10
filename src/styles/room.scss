@@ -111,6 +111,21 @@
 
         .question-list {
             margin-top: 32px;
+
+            .empty-question-list {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                &>:first-child{
+                    margin-top: 3rem;
+                    font-size: 10rem;
+                    color: #835afd;
+                }
+                color: var(--color-span);
+                span {
+                    display: block;
+                }
+            }
         }
     }
 }
