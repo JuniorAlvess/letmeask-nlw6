@@ -48,8 +48,8 @@
 Clone o projeto e acesse a pasta do mesmo.
 
 ```bash
-$ git clone https://github.com/rocketseat-education/nlw-06-reactjs
-$ cd nlw-06-reactjs
+$ git clone https://github.com/JuniorAlvess/letmeask-nlw6.git
+$ cd letmeask-nlw6
 ```
 
 ### Para iniciá-lo, siga os passos abaixo:
