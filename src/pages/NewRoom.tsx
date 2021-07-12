@@ -1,17 +1,16 @@
 import { FormEvent, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
-
-import illustrationImg from '../assets/images/illustration.svg';
-import logoImg from '../assets/images/logo.svg';
-import googleIconImg from '../assets/images/google-icon.svg';
+import toast, {Toaster} from 'react-hot-toast'
 
 import { Button } from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
+import { database } from '../services/firebase';
+import { SwitchToLightAndDarkMode } from '../components/SwitchToLightAndDarkMode';
+
+import illustrationImg from '../assets/images/illustration.svg';
+import logoImg from '../assets/images/logo.svg';
 
 import '../styles/auth.scss'
-import { database } from '../services/firebase';
-import firebase from 'firebase';
-import { SwitchToLightAndDarkMode } from '../components/SwitchToLightAndDarkMode';
 
 export function NewRoom() {
     const { user } = useAuth()
@@ -23,7 +22,7 @@ export function NewRoom() {
 
         // .trim() remove os espaços tanto da esquerda quanto da direita
         if (newRoom.trim() === '') {
-            return;
+            return toast.error("Campo (nome da sala) vazio!")
         }
 
         const roomRef = database.ref('rooms');
@@ -32,12 +31,12 @@ export function NewRoom() {
             title: newRoom,
             authorId: user?.id
         })
-
-        history.push(`/rooms/${firebaseRoom.key}`)
+        history.push(`/admin/rooms/${firebaseRoom.key}`)
     }
 
     return (
         <div id="page-auth">
+            <Toaster />
             <aside>
                 <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas" />
                 <strong>Crie salas de Q&amp;A ao-vivo</strong>
