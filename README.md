@@ -10,7 +10,7 @@
 ## Screenshots
 <table>
     <tr>
-        <th width="0%">
+        <th>
             Web Interface - Desktop Light Mode
         </th>
                 <th width="50%">
