@@ -7,7 +7,7 @@
 * Aplicação totalmente responsiva (Adaptada para diversas telas e dispositivos).
 * Light e Dark mode.
 
-## Screenshot
+## Screenshots
 <table>
     <tr>
         <th width="0%">
